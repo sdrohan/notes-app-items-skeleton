@@ -1,7 +1,7 @@
 package controllers
 
 import models.Note
-import utils.Utilities.formatListString
+import utils.formatListString
 import java.util.ArrayList
 
 class NoteAPI() {
@@ -11,14 +11,14 @@ class NoteAPI() {
     // ----------------------------------------------
     //  For Managing the id internally in the program
     // ----------------------------------------------
-    private var lastId = 0
-    private fun getId() = lastId++
+    private var lastNoteId = 0
+    private fun getNextId() = lastNoteId++
 
     // ----------------------------------------------
     //  CRUD METHODS FOR NOTE ArrayList
     // ----------------------------------------------
     fun add(note: Note): Boolean {
-        note.noteId = getId()
+        note.noteId = getNextId()
         return notes.add(note)
     }
 

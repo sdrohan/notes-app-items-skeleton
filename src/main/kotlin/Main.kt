@@ -1,9 +1,9 @@
 import controllers.NoteAPI
 import models.Item
 import models.Note
-import utils.ScannerInput.readNextChar
-import utils.ScannerInput.readNextInt
-import utils.ScannerInput.readNextLine
+import utils.readNextChar
+import utils.readNextInt
+import utils.readNextLine
 import kotlin.system.exitProcess
 
 private val noteAPI = NoteAPI()

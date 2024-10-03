@@ -1,6 +1,6 @@
 package models
 
-import utils.Utilities
+import utils.formatSetString
 
 data class Note(var noteId: Int = 0,
                 var noteTitle: String,
@@ -55,7 +55,7 @@ data class Note(var noteId: Int = 0,
 
     fun listItems() =
          if (items.isEmpty())  "\tNO ITEMS ADDED"
-         else  Utilities.formatSetString(items)
+         else  formatSetString(items)
 
     override fun toString(): String {
         val archived = if (isNoteArchived) 'Y' else 'N'
